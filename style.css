@@ -1,0 +1,530 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+:root {
+--green: #16a34a;
+--green-dark: #15803d;
+--green-light: #dcfce7;
+--orange: #f97316;
+--yellow: #facc15;
+--blue: #0ea5e9;
+--purple: #8b5cf6;
+--red: #ef4444;
+--text: #172033;
+--muted: #64748b;
+--white: #ffffff;
+--background: #f4f8f5;
+}
+
+body {
+font-family: "Poppins", Arial, sans-serif;
+background: var(--background);
+color: var(--text);
+min-height: 100vh;
+}
+
+.page {
+width: 100%;
+overflow: hidden;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+position: relative;
+min-height: 370px;
+background:
+linear-gradient(
+135deg,
+#16a34a 0%,
+#22c55e 50%,
+#86efac 100%
+);
+color: white;
+overflow: hidden;
+border-radius: 0 0 40px 40px;
+}
+
+.hero-pattern {
+position: absolute;
+width: 500px;
+height: 500px;
+right: -180px;
+top: -250px;
+border-radius: 50%;
+background: rgba(255,255,255,.12);
+}
+
+.hero-pattern::after {
+content: "";
+position: absolute;
+width: 300px;
+height: 300px;
+right: 100px;
+top: 220px;
+border-radius: 50%;
+background: rgba(255,255,255,.10);
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+max-width: 900px;
+margin: auto;
+padding: 55px 20px 45px;
+text-align: center;
+}
+
+.logo-circle {
+width: 75px;
+height: 75px;
+margin: 0 auto 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(255,255,255,.20);
+border: 2px solid rgba(255,255,255,.5);
+border-radius: 50%;
+font-size: 34px;
+backdrop-filter: blur(8px);
+}
+
+.badge {
+display: inline-block;
+padding: 7px 16px;
+border-radius: 50px;
+background: rgba(255,255,255,.18);
+border: 1px solid rgba(255,255,255,.4);
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1.5px;
+margin-bottom: 14px;
+}
+
+.hero h1 {
+font-size: clamp(28px, 6vw, 48px);
+line-height: 1.15;
+font-weight: 800;
+margin-bottom: 12px;
+}
+
+.hero p {
+max-width: 650px;
+margin: auto;
+font-size: 14px;
+line-height: 1.7;
+opacity: .95;
+}
+
+.date-box {
+display: inline-flex;
+align-items: center;
+gap: 12px;
+margin-top: 25px;
+padding: 12px 20px;
+background: white;
+color: var(--text);
+border-radius: 18px;
+text-align: left;
+box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+.date-box > span {
+font-size: 25px;
+}
+
+.date-box small {
+display: block;
+color: var(--green);
+font-size: 9px;
+font-weight: 800;
+letter-spacing: 1px;
+}
+
+.date-box strong {
+font-size: 13px;
+}
+
+/* =========================
+CONTAINER
+========================= */
+
+.container {
+max-width: 1050px;
+margin: -25px auto 0;
+position: relative;
+z-index: 3;
+padding: 0 20px 50px;
+}
+
+section {
+margin-bottom: 35px;
+}
+
+/* =========================
+SECTION TITLE
+========================= */
+
+.section-title {
+margin-bottom: 18px;
+}
+
+.section-title > div {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.section-icon {
+width: 45px;
+height: 45px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: white;
+border-radius: 14px;
+font-size: 23px;
+box-shadow: 0 5px 20px rgba(0,0,0,.07);
+}
+
+.section-title small {
+font-size: 9px;
+color: var(--green);
+font-weight: 800;
+letter-spacing: 1.5px;
+}
+
+.section-title h2 {
+font-size: 22px;
+line-height: 1.2;
+}
+
+/* =========================
+MENU CARDS
+========================= */
+
+.menu-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 15px;
+}
+
+.menu-card {
+position: relative;
+display: flex;
+align-items: center;
+gap: 15px;
+padding: 20px;
+background: white;
+border-radius: 22px;
+box-shadow: 0 8px 25px rgba(15,23,42,.06);
+transition: .25s ease;
+overflow: hidden;
+}
+
+.menu-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 15px 35px rgba(15,23,42,.12);
+}
+
+.menu-card::after {
+content: "";
+position: absolute;
+right: -35px;
+bottom: -45px;
+width: 120px;
+height: 120px;
+border-radius: 50%;
+background: rgba(22,163,74,.06);
+}
+
+.menu-icon {
+min-width: 65px;
+height: 65px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 19px;
+background: var(--green-light);
+font-size: 32px;
+}
+
+.menu-card span {
+font-size: 10px;
+font-weight: 700;
+color: var(--green);
+}
+
+.menu-card h3 {
+font-size: 17px;
+margin: 2px 0;
+}
+
+.menu-card p {
+color: var(--muted);
+font-size: 11px;
+}
+
+/* =========================
+NUTRITION
+========================= */
+
+.nutrition-grid {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 12px;
+}
+
+.nutrition-card {
+padding: 17px;
+border-radius: 20px;
+background: white;
+box-shadow: 0 8px 25px rgba(15,23,42,.06);
+transition: .25s ease;
+}
+
+.nutrition-card:hover {
+transform: translateY(-3px);
+}
+
+.nutrition-icon {
+width: 42px;
+height: 42px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #f1f5f9;
+border-radius: 13px;
+font-size: 21px;
+margin-bottom: 12px;
+}
+
+.nutrition-card span {
+display: block;
+color: var(--muted);
+font-size: 10px;
+font-weight: 600;
+}
+
+.nutrition-card strong {
+font-size: 25px;
+line-height: 1.2;
+}
+
+.nutrition-card small {
+color: var(--muted);
+font-size: 9px;
+margin-left: 2px;
+}
+
+/* =========================
+TIME CARD
+========================= */
+
+.time-card {
+display: flex;
+align-items: center;
+gap: 20px;
+padding: 25px;
+background: linear-gradient(
+135deg,
+#fff7ed,
+#ffedd5
+);
+border: 1px solid #fed7aa;
+border-radius: 25px;
+}
+
+.time-icon {
+min-width: 65px;
+height: 65px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #ffedd5;
+border-radius: 20px;
+font-size: 30px;
+}
+
+.time-card small {
+color: #ea580c;
+font-weight: 800;
+font-size: 9px;
+letter-spacing: 1.5px;
+}
+
+.time-card h2 {
+font-size: 17px;
+margin: 3px 0 5px;
+}
+
+.time-card p {
+color: #9a3412;
+font-size: 11px;
+line-height: 1.6;
+}
+
+/* =========================
+MESSAGE
+========================= */
+
+.message-card {
+display: flex;
+align-items: center;
+gap: 20px;
+padding: 25px;
+background: linear-gradient(
+135deg,
+#f0fdf4,
+#dcfce7
+);
+border-radius: 25px;
+border: 1px solid #bbf7d0;
+}
+
+.message-icon {
+min-width: 60px;
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: white;
+border-radius: 18px;
+font-size: 27px;
+}
+
+.message-card h2 {
+font-size: 18px;
+color: var(--green-dark);
+}
+
+.message-card p {
+margin-top: 5px;
+color: #166534;
+font-size: 11px;
+line-height: 1.7;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+text-align: center;
+padding: 35px 10px 10px;
+}
+
+.footer-logo {
+width: 45px;
+height: 45px;
+margin: auto auto 12px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: var(--green-light);
+border-radius: 50%;
+}
+
+footer strong {
+display: block;
+font-size: 12px;
+color: var(--green-dark);
+}
+
+footer p {
+color: var(--muted);
+font-size: 10px;
+margin-top: 5px;
+}
+
+.copyright {
+margin-top: 20px;
+color: #94a3b8;
+font-size: 9px;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+```
+.hero {
+    min-height: 390px;
+    border-radius: 0 0 30px 30px;
+}
+
+.hero-content {
+    padding: 40px 18px 40px;
+}
+
+.logo-circle {
+    width: 65px;
+    height: 65px;
+    font-size: 29px;
+}
+
+.hero h1 {
+    font-size: 30px;
+}
+
+.hero p {
+    font-size: 12px;
+}
+
+.container {
+    padding: 0 14px 40px;
+}
+
+.menu-grid {
+    grid-template-columns: 1fr;
+}
+
+.nutrition-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.nutrition-card:last-child {
+    grid-column: span 2;
+}
+
+.time-card,
+.message-card {
+    align-items: flex-start;
+}
+
+.time-card h2,
+.message-card h2 {
+    font-size: 15px;
+}
+```
+
+}
+
+/* =========================
+SMALL PHONE
+========================= */
+
+@media (max-width: 380px) {
+
+```
+.hero h1 {
+    font-size: 26px;
+}
+
+.nutrition-card strong {
+    font-size: 22px;
+}
+
+.menu-card {
+    padding: 15px;
+}
+```
+
+}
