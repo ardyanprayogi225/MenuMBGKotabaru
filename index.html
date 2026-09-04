@@ -1,113 +1,271 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Menu MBG</title>
+```
+<title>Menu MBG - Makan Bergizi Gratis</title>
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f3f4f6;
-    margin: 0;
-    padding: 20px;
-}
+<meta name="theme-color" content="#16a34a">
 
-.container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.1);
-}
+<link rel="stylesheet" href="style.css">
 
-h1 {
-    text-align: center;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+```
 
-.tanggal {
-    text-align: center;
-    color: #666;
-}
-
-.menu {
-    margin-top: 20px;
-}
-
-.menu-item {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-}
-
-.gizi {
-    margin-top: 20px;
-    padding: 15px;
-    background: #f8f8f8;
-    border-radius: 15px;
-}
-
-.gizi div {
-    display: flex;
-    justify-content: space-between;
-    padding: 6px 0;
-}
-</style>
 </head>
 
 <body>
 
-<div class="container">
+```
+<div class="page">
 
-    <h1>🍽️ MENU MBG</h1>
+    <!-- HEADER -->
+    <header class="hero">
 
-    <p class="tanggal">
-        Senin, 7 September 2026
-    </p>
+        <div class="hero-pattern"></div>
 
-    <div class="menu">
+        <div class="hero-content">
 
-        <div class="menu-item">🍚 Nasi</div>
-        <div class="menu-item">🍗 Ayam</div>
-        <div class="menu-item">🥬 Sayur</div>
-        <div class="menu-item">🍌 Pisang</div>
-        <div class="menu-item">🥛 Susu</div>
+            <div class="logo-circle">
+                ❤️
+            </div>
 
-    </div>
+            <div class="badge">
+                PROGRAM MBG
+            </div>
 
-    <div class="gizi">
+            <h1>Menu Makan Bergizi Gratis</h1>
 
-        <h3>Informasi Nilai Gizi</h3>
+            <p>
+                Sajian bergizi untuk mendukung kesehatan,
+                pertumbuhan, dan aktivitas sehari-hari.
+            </p>
 
-        <div>
-            <span>Energi</span>
-            <b>650 kkal</b>
+            <div class="date-box">
+                <span>📅</span>
+                <div>
+                    <small>MENU HARI INI</small>
+                    <strong id="tanggal"></strong>
+                </div>
+            </div>
+
         </div>
 
-        <div>
-            <span>Protein</span>
-            <b>25 g</b>
-        </div>
+    </header>
 
-        <div>
-            <span>Lemak</span>
-            <b>20 g</b>
-        </div>
 
-        <div>
-            <span>Karbohidrat</span>
-            <b>85 g</b>
-        </div>
+    <!-- CONTENT -->
+    <main class="container">
 
-        <div>
-            <span>Serat</span>
-            <b>8 g</b>
-        </div>
+        <!-- MENU -->
+        <section>
 
-    </div>
+            <div class="section-title">
+                <div>
+                    <span class="section-icon">🍱</span>
+                    <div>
+                        <small>HIDANGAN</small>
+                        <h2>Menu Hari Ini</h2>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="menu-grid">
+
+                <div class="menu-card nasi">
+                    <div class="menu-icon">🍚</div>
+                    <div>
+                        <span>Karbohidrat</span>
+                        <h3>Nasi Putih</h3>
+                        <p>Sumber energi utama</p>
+                    </div>
+                </div>
+
+
+                <div class="menu-card lauk">
+                    <div class="menu-icon">🍗</div>
+                    <div>
+                        <span>Protein</span>
+                        <h3>Ayam Goreng</h3>
+                        <p>Protein hewani</p>
+                    </div>
+                </div>
+
+
+                <div class="menu-card sayur">
+                    <div class="menu-icon">🥬</div>
+                    <div>
+                        <span>Serat & Vitamin</span>
+                        <h3>Sayur</h3>
+                        <p>Sayuran segar bergizi</p>
+                    </div>
+                </div>
+
+
+                <div class="menu-card buah">
+                    <div class="menu-icon">🍌</div>
+                    <div>
+                        <span>Vitamin</span>
+                        <h3>Buah</h3>
+                        <p>Buah segar pilihan</p>
+                    </div>
+                </div>
+
+
+                <div class="menu-card susu">
+                    <div class="menu-icon">🥛</div>
+                    <div>
+                        <span>Pelengkap</span>
+                        <h3>Susu</h3>
+                        <p>Pelengkap makanan bergizi</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NUTRITION -->
+        <section class="nutrition-section">
+
+            <div class="section-title">
+                <div>
+                    <span class="section-icon">📊</span>
+                    <div>
+                        <small>INFORMASI</small>
+                        <h2>Informasi Gizi</h2>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="nutrition-grid">
+
+                <div class="nutrition-card energy">
+                    <div class="nutrition-icon">🔥</div>
+                    <div>
+                        <span>Energi</span>
+                        <strong>500</strong>
+                        <small>kkal</small>
+                    </div>
+                </div>
+
+
+                <div class="nutrition-card protein">
+                    <div class="nutrition-icon">💪</div>
+                    <div>
+                        <span>Protein</span>
+                        <strong>25</strong>
+                        <small>gram</small>
+                    </div>
+                </div>
+
+
+                <div class="nutrition-card fat">
+                    <div class="nutrition-icon">🥑</div>
+                    <div>
+                        <span>Lemak</span>
+                        <strong>15</strong>
+                        <small>gram</small>
+                    </div>
+                </div>
+
+
+                <div class="nutrition-card carb">
+                    <div class="nutrition-icon">🍚</div>
+                    <div>
+                        <span>Karbohidrat</span>
+                        <strong>70</strong>
+                        <small>gram</small>
+                    </div>
+                </div>
+
+
+                <div class="nutrition-card fiber">
+                    <div class="nutrition-icon">🌿</div>
+                    <div>
+                        <span>Serat</span>
+                        <strong>8</strong>
+                        <small>gram</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONSUMPTION TIME -->
+        <section class="time-card">
+
+            <div class="time-icon">
+                ⏰
+            </div>
+
+            <div>
+                <small>WAKTU KONSUMSI</small>
+                <h2>Disarankan sebelum pukul 11.00 WIB</h2>
+                <p>
+                    Segera konsumsi makanan setelah diterima
+                    untuk menjaga kualitas dan keamanan makanan.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- HEALTH MESSAGE -->
+        <section class="message-card">
+
+            <div class="message-icon">
+                ❤️
+            </div>
+
+            <div>
+                <h2>Makan Bergizi, Anak Sehat</h2>
+                <p>
+                    Makanan bergizi membantu memenuhi kebutuhan
+                    energi dan nutrisi untuk mendukung aktivitas
+                    serta pertumbuhan.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div class="footer-logo">
+                ❤️
+            </div>
+
+            <strong>PROGRAM MAKAN BERGIZI GRATIS</strong>
+
+            <p>
+                Informasi menu dan nilai gizi makanan
+            </p>
+
+            <div class="copyright">
+                © <span id="tahun"></span> • Menu MBG
+            </div>
+
+        </footer>
+
+    </main>
 
 </div>
+
+
+<script src="script.js"></script>
+```
 
 </body>
 </html>
