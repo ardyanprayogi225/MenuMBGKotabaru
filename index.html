@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
-<title>Menu MBG - Makan Bergizi Gratis</title>
+<title>Menu Makan Bergizi Gratis</title>
 
 <meta name="theme-color" content="#16a34a">
 
@@ -14,6 +14,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 ```
 
@@ -21,251 +22,316 @@
 
 <body>
 
-```
 <div class="page">
 
-    <!-- HEADER -->
-    <header class="hero">
+```
+<!-- HEADER -->
+<header class="hero">
 
-        <div class="hero-pattern"></div>
+    <div class="hero-pattern"></div>
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <div class="logo-circle">
-                ❤️
-            </div>
+        <div class="logo-circle">
+            ❤️
+        </div>
 
-            <div class="badge">
-                PROGRAM MBG
-            </div>
+        <div class="badge">
+            PROGRAM MBG
+        </div>
 
-            <h1>Menu Makan Bergizi Gratis</h1>
+        <h1>Menu Makan Bergizi Gratis</h1>
 
-            <p>
-                Sajian bergizi untuk mendukung kesehatan,
-                pertumbuhan, dan aktivitas sehari-hari.
-            </p>
+        <p>
+            Sajian bergizi untuk mendukung kesehatan,
+            pertumbuhan, dan aktivitas sehari-hari.
+        </p>
 
-            <div class="date-box">
-                <span>📅</span>
-                <div>
-                    <small>MENU HARI INI</small>
-                    <strong id="tanggal"></strong>
+    </div>
+
+</header>
+
+
+<!-- CONTENT -->
+<main class="container">
+
+
+    <!-- DATE SELECTOR -->
+    <section class="date-section">
+
+        <div class="date-title">
+            <small>PILIH TANGGAL</small>
+            <h2>Menu Berdasarkan Tanggal</h2>
+        </div>
+
+
+        <div class="date-selector">
+
+            <button class="date-arrow" onclick="ubahTanggal(-1)">
+                ‹
+            </button>
+
+
+            <div class="date-display">
+
+                <div class="calendar-icon">
+                    📅
                 </div>
+
+                <div>
+
+                    <small id="hari"></small>
+
+                    <strong id="tanggal"></strong>
+
+                </div>
+
+            </div>
+
+
+            <button class="date-arrow" onclick="ubahTanggal(1)">
+                ›
+            </button>
+
+        </div>
+
+
+        <button class="calendar-button" onclick="bukaKalender()">
+            📅 Pilih Tanggal
+        </button>
+
+        <input
+            type="date"
+            id="calendarInput"
+            onchange="pilihTanggal()"
+        >
+
+    </section>
+
+
+
+    <!-- MENU -->
+    <section>
+
+        <div class="section-title">
+
+            <div>
+
+                <span class="section-icon">
+                    🍱
+                </span>
+
+                <div>
+
+                    <small>HIDANGAN</small>
+
+                    <h2>Menu Hari Ini</h2>
+
+                </div>
+
             </div>
 
         </div>
 
-    </header>
+
+        <div class="menu-grid" id="menuContainer">
+
+        </div>
+
+    </section>
 
 
-    <!-- CONTENT -->
-    <main class="container">
 
-        <!-- MENU -->
-        <section>
+    <!-- NUTRITION -->
+    <section class="nutrition-section">
 
-            <div class="section-title">
-                <div>
-                    <span class="section-icon">🍱</span>
-                    <div>
-                        <small>HIDANGAN</small>
-                        <h2>Menu Hari Ini</h2>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="menu-grid">
-
-                <div class="menu-card nasi">
-                    <div class="menu-icon">🍚</div>
-                    <div>
-                        <span>Karbohidrat</span>
-                        <h3>Nasi Putih</h3>
-                        <p>Sumber energi utama</p>
-                    </div>
-                </div>
-
-
-                <div class="menu-card lauk">
-                    <div class="menu-icon">🍗</div>
-                    <div>
-                        <span>Protein</span>
-                        <h3>Ayam Goreng</h3>
-                        <p>Protein hewani</p>
-                    </div>
-                </div>
-
-
-                <div class="menu-card sayur">
-                    <div class="menu-icon">🥬</div>
-                    <div>
-                        <span>Serat & Vitamin</span>
-                        <h3>Sayur</h3>
-                        <p>Sayuran segar bergizi</p>
-                    </div>
-                </div>
-
-
-                <div class="menu-card buah">
-                    <div class="menu-icon">🍌</div>
-                    <div>
-                        <span>Vitamin</span>
-                        <h3>Buah</h3>
-                        <p>Buah segar pilihan</p>
-                    </div>
-                </div>
-
-
-                <div class="menu-card susu">
-                    <div class="menu-icon">🥛</div>
-                    <div>
-                        <span>Pelengkap</span>
-                        <h3>Susu</h3>
-                        <p>Pelengkap makanan bergizi</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- NUTRITION -->
-        <section class="nutrition-section">
-
-            <div class="section-title">
-                <div>
-                    <span class="section-icon">📊</span>
-                    <div>
-                        <small>INFORMASI</small>
-                        <h2>Informasi Gizi</h2>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="nutrition-grid">
-
-                <div class="nutrition-card energy">
-                    <div class="nutrition-icon">🔥</div>
-                    <div>
-                        <span>Energi</span>
-                        <strong>500</strong>
-                        <small>kkal</small>
-                    </div>
-                </div>
-
-
-                <div class="nutrition-card protein">
-                    <div class="nutrition-icon">💪</div>
-                    <div>
-                        <span>Protein</span>
-                        <strong>25</strong>
-                        <small>gram</small>
-                    </div>
-                </div>
-
-
-                <div class="nutrition-card fat">
-                    <div class="nutrition-icon">🥑</div>
-                    <div>
-                        <span>Lemak</span>
-                        <strong>15</strong>
-                        <small>gram</small>
-                    </div>
-                </div>
-
-
-                <div class="nutrition-card carb">
-                    <div class="nutrition-icon">🍚</div>
-                    <div>
-                        <span>Karbohidrat</span>
-                        <strong>70</strong>
-                        <small>gram</small>
-                    </div>
-                </div>
-
-
-                <div class="nutrition-card fiber">
-                    <div class="nutrition-icon">🌿</div>
-                    <div>
-                        <span>Serat</span>
-                        <strong>8</strong>
-                        <small>gram</small>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONSUMPTION TIME -->
-        <section class="time-card">
-
-            <div class="time-icon">
-                ⏰
-            </div>
+        <div class="section-title">
 
             <div>
-                <small>WAKTU KONSUMSI</small>
-                <h2>Disarankan sebelum pukul 11.00 WIB</h2>
-                <p>
-                    Segera konsumsi makanan setelah diterima
-                    untuk menjaga kualitas dan keamanan makanan.
-                </p>
+
+                <span class="section-icon">
+                    📊
+                </span>
+
+                <div>
+
+                    <small>INFORMASI</small>
+
+                    <h2>Informasi Gizi</h2>
+
+                </div>
+
             </div>
 
-        </section>
+        </div>
 
 
-        <!-- HEALTH MESSAGE -->
-        <section class="message-card">
+        <div class="nutrition-grid">
 
-            <div class="message-icon">
-                ❤️
+
+            <div class="nutrition-card energy">
+
+                <div class="nutrition-icon">
+                    🔥
+                </div>
+
+                <span>Energi</span>
+
+                <strong id="energi">0</strong>
+
+                <small>kkal</small>
+
             </div>
 
-            <div>
-                <h2>Makan Bergizi, Anak Sehat</h2>
-                <p>
-                    Makanan bergizi membantu memenuhi kebutuhan
-                    energi dan nutrisi untuk mendukung aktivitas
-                    serta pertumbuhan.
-                </p>
+
+
+            <div class="nutrition-card protein">
+
+                <div class="nutrition-icon">
+                    💪
+                </div>
+
+                <span>Protein</span>
+
+                <strong id="protein">0</strong>
+
+                <small>gram</small>
+
             </div>
 
-        </section>
 
 
-        <!-- FOOTER -->
-        <footer>
+            <div class="nutrition-card fat">
 
-            <div class="footer-logo">
-                ❤️
+                <div class="nutrition-icon">
+                    🥑
+                </div>
+
+                <span>Lemak</span>
+
+                <strong id="lemak">0</strong>
+
+                <small>gram</small>
+
             </div>
 
-            <strong>PROGRAM MAKAN BERGIZI GRATIS</strong>
+
+
+            <div class="nutrition-card carb">
+
+                <div class="nutrition-icon">
+                    🍚
+                </div>
+
+                <span>Karbohidrat</span>
+
+                <strong id="karbohidrat">0</strong>
+
+                <small>gram</small>
+
+            </div>
+
+
+
+            <div class="nutrition-card fiber">
+
+                <div class="nutrition-icon">
+                    🌿
+                </div>
+
+                <span>Serat</span>
+
+                <strong id="serat">0</strong>
+
+                <small>gram</small>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- TIME -->
+    <section class="time-card">
+
+        <div class="time-icon">
+            ⏰
+        </div>
+
+        <div>
+
+            <small>WAKTU KONSUMSI</small>
+
+            <h2>
+                Disarankan sebelum pukul 11.00 WIB
+            </h2>
 
             <p>
-                Informasi menu dan nilai gizi makanan
+                Segera konsumsi makanan setelah diterima
+                untuk menjaga kualitas dan keamanan makanan.
             </p>
 
-            <div class="copyright">
-                © <span id="tahun"></span> • Menu MBG
-            </div>
+        </div>
 
-        </footer>
+    </section>
 
-    </main>
+
+
+    <!-- MESSAGE -->
+    <section class="message-card">
+
+        <div class="message-icon">
+            ❤️
+        </div>
+
+        <div>
+
+            <h2>
+                Makan Bergizi, Anak Sehat
+            </h2>
+
+            <p>
+                Makanan bergizi membantu memenuhi kebutuhan
+                energi dan nutrisi untuk mendukung aktivitas
+                serta pertumbuhan.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            ❤️
+        </div>
+
+        <strong>
+            PROGRAM MAKAN BERGIZI GRATIS
+        </strong>
+
+        <p>
+            Informasi menu dan nilai gizi makanan
+        </p>
+
+        <div class="copyright">
+            © <span id="tahun"></span> • Menu MBG
+        </div>
+
+    </footer>
+
+</main>
+```
 
 </div>
 
-
 <script src="script.js"></script>
-```
 
 </body>
 </html>
